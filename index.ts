@@ -51,8 +51,8 @@ cultus.license = 'cl2026'
 console.log(cultus.displayAll(),Alto._license);
 console.log(civic.displayAll(), civic._license);
 console.log(Alto.displayAll(), Alto._license);
-// console.log(Alto._license);
-// console.log(civic._license);
-// console.log(cultus._license);
-// console.log(Alto.license);
+console.log(Alto._license);
+console.log(civic._license);
+console.log(cultus._license);
+console.log(Alto.license);
 
