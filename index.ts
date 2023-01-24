@@ -1,58 +1,60 @@
-// OOPS classes in TS
-// create Class
-class Car {
-    color!: string;
-    hp!: string;
-    model!: number;
-    _license!: string;
-    // create class in constructor 
-    constructor(color: string, hp: string, model: number) {
-        this.color = color;
-        this.hp = hp;
-        this.model = model;
-    }
-    // create getter setter
-    get license() {
-        return this._license
-    }
+console.clear()
 
-
-    set license(val: string) {
-        this._license = val;
-    }
-
-
-    displayAll() {
-        return `color: ${this.color} hp: ${this.hp} model: ${this.model}}`
-    }
-    carStart() {
-        return `car is start`
-    }
-
-    carGear() {
-        console.log('car gear change');
-    }
-    carStop() {
-        return "car is stop"
-    }
+class Person{
+    name?:string;
 }
 
-const cultus = new Car('red', "1000cc", 1000);
-const civic = new Car('blur', "1100cc", 1500);
-const Alto = new Car('green', "1200cc", 2000);
-Alto.license = 'al2026'
-civic.license = 'cv2026'
-cultus.license = 'cl2026'
+class Student extends Person{
+course?: string;
+rollNumber?: string;
+}
+
+class Teacher extends Person{
+    course?:string;
+    timing?:string;
+}
+class Course{
+    classTeacher?:Teacher;
+    students?:Student[];
+    timing?:string;
+}
+
+const student1:Student = new Student();
+student1.name="owais"
+student1.rollNumber='1'
+
+const student2:Student = new Student();
+student2.name="shoaib"
+student2.rollNumber= '2'
 
 
+const student3:Student = new Student();
+student3.name="mubashir"
+student3.rollNumber='3'
+
+const teacher:Teacher = new Teacher();
+teacher.name= "sir Zia khan",
+teacher.course= "piaic",
+teacher.timing= "6-10"
 
 
+const course:Course = new Course();
 
-console.log(cultus.displayAll(),Alto._license);
-console.log(civic.displayAll(), civic._license);
-console.log(Alto.displayAll(), Alto._license);
-console.log(Alto._license);
-console.log(civic._license);
-console.log(cultus._license);
-console.log(Alto.license);
+course.classTeacher=teacher;
 
+course.timing=teacher.timing;
+
+student1.course=teacher.course
+student2.course=teacher.course
+student3.course=teacher.course
+
+const studentarray:Student[]=[student1,student2,student3]
+course.students = studentarray;
+
+// console.log(course);
+// console.log(Student);
+// console.log(Person);
+
+// console.log(student1);
+// console.log(student2);
+// console.log(student3);

@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "start": " tsc && node index.js"
+=======
+    "start": "tsc && node index.js"
+>>>>>>> 1b01b31024b211fcebf1066c9b8d948e8b7b20a3
   },
   "keywords": [],
   "author": "",
